@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="840" viewBox="0 0 1360 840" role="img" aria-labelledby="title desc">
+  <title id="title">图小二 Prompt 与 AI 接入流程</title>
+  <desc id="desc">展示图小二从用户输入到 Prompt 组装、AI 生成、JSON 解析和前端呈现的流程。</desc>
+  <rect width="1360" height="840" fill="#f6f5f0"/>
+  <rect x="64" y="56" width="1232" height="728" rx="10" fill="#ffffff" stroke="#dad7cc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="104" y="126" fill="#1f272d" font-size="42" font-weight="700">Prompt 结构化后，再接 AI</text>
+    <text x="104" y="164" fill="#65716d" font-size="20">先固定输入、输出和安全边界，后面接任何模型都更稳。</text>
+
+    <rect x="104" y="224" width="210" height="132" rx="8" fill="#eaf4f0" stroke="#bdd8cd"/>
+    <text x="130" y="264" fill="#2f7d68" font-size="24" font-weight="700">用户输入</text>
+    <text x="130" y="302" fill="#5e706b" font-size="18">账号定位 / 平台</text>
+    <text x="130" y="330" fill="#5e706b" font-size="18">任务 / 素材 / 语气</text>
+
+    <rect x="374" y="224" width="210" height="132" rx="8" fill="#fff5de" stroke="#ead091"/>
+    <text x="400" y="264" fill="#7a571e" font-size="24" font-weight="700">Prompt 组装</text>
+    <text x="400" y="302" fill="#746143" font-size="18">系统角色</text>
+    <text x="400" y="330" fill="#746143" font-size="18">输出格式约束</text>
+
+    <rect x="644" y="224" width="210" height="132" rx="8" fill="#f7ece9" stroke="#e2c0b9"/>
+    <text x="670" y="264" fill="#7d4036" font-size="24" font-weight="700">AI 生成</text>
+    <text x="670" y="302" fill="#765851" font-size="18">返回结构化 JSON</text>
+    <text x="670" y="330" fill="#765851" font-size="18">失败时有兜底</text>
+
+    <rect x="914" y="224" width="240" height="132" rx="8" fill="#edf2f7" stroke="#c8d4e1"/>
+    <text x="940" y="264" fill="#334761" font-size="24" font-weight="700">前端呈现</text>
+    <text x="940" y="302" fill="#596a7d" font-size="18">标题 / 正文 / 标签</text>
+    <text x="940" y="330" fill="#596a7d" font-size="18">脚本 / 建议 / 复制</text>
+
+    <path d="M326 290 L362 290" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M596 290 L632 290" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M866 290 L902 290" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M358 280 L372 290 L358 300" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M628 280 L642 290 L628 300" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M898 280 L912 290 L898 300" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="104" y="430" fill="#1f272d" font-size="30" font-weight="700">输出结构</text>
+    <rect x="104" y="468" width="1110" height="190" rx="8" fill="#fbfcfb" stroke="#dadfd6"/>
+    <text x="132" y="516" fill="#1f272d" font-size="20" font-weight="700">titles</text>
+    <text x="302" y="516" fill="#1f272d" font-size="20" font-weight="700">coverText</text>
+    <text x="492" y="516" fill="#1f272d" font-size="20" font-weight="700">body</text>
+    <text x="642" y="516" fill="#1f272d" font-size="20" font-weight="700">tags</text>
+    <text x="792" y="516" fill="#1f272d" font-size="20" font-weight="700">script</text>
+    <text x="952" y="516" fill="#1f272d" font-size="20" font-weight="700">advice</text>
+
+    <text x="132" y="558" fill="#65716d" font-size="18">3 个标题</text>
+    <text x="302" y="558" fill="#65716d" font-size="18">封面短句</text>
+    <text x="492" y="558" fill="#65716d" font-size="18">正文笔记</text>
+    <text x="642" y="558" fill="#65716d" font-size="18">标签数组</text>
+    <text x="792" y="558" fill="#65716d" font-size="18">口播/镜头</text>
+    <text x="952" y="558" fill="#65716d" font-size="18">发布建议</text>
+
+    <text x="132" y="612" fill="#2f7d68" font-size="22" font-weight="700">原则：AI 只负责生成结构化内容，前端负责稳定呈现、编辑、复制和保存。</text>
+
+    <rect x="104" y="704" width="1110" height="46" rx="8" fill="#1f272d"/>
+    <text x="132" y="733" fill="#ffffff" font-size="20">接入条件：10 组测试样例通过 6 组以上，再把模板生成替换为真实 AI 生成。</text>
+  </g>
+</svg>

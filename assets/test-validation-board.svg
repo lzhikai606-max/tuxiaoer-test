@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="840" viewBox="0 0 1360 840" role="img" aria-labelledby="title desc">
+  <title id="title">图小二真实样例验证看板</title>
+  <desc id="desc">展示图小二用十组真实样例验证产品价值的评分流程。</desc>
+  <rect width="1360" height="840" fill="#f6f5f0"/>
+  <rect x="64" y="56" width="1232" height="728" rx="10" fill="#ffffff" stroke="#dad7cc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="104" y="126" fill="#1f272d" font-size="42" font-weight="700">真实样例验证看板</text>
+    <text x="104" y="164" fill="#65716d" font-size="20">用 10 组真实素材判断：图小二生成的内容，是否能被用户轻度修改后发布。</text>
+
+    <rect x="104" y="214" width="250" height="136" rx="8" fill="#eaf4f0" stroke="#bdd8cd"/>
+    <text x="132" y="258" fill="#2f7d68" font-size="26" font-weight="700">输入真实样例</text>
+    <text x="132" y="298" fill="#5e706b" font-size="18">账号定位</text>
+    <text x="132" y="326" fill="#5e706b" font-size="18">素材 + 一句话想法</text>
+
+    <rect x="404" y="214" width="250" height="136" rx="8" fill="#fff5de" stroke="#ead091"/>
+    <text x="432" y="258" fill="#7a571e" font-size="26" font-weight="700">跑 V0.2 原型</text>
+    <text x="432" y="298" fill="#746143" font-size="18">生成笔记/脚本/标题</text>
+    <text x="432" y="326" fill="#746143" font-size="18">记录输出结果</text>
+
+    <rect x="704" y="214" width="250" height="136" rx="8" fill="#f7ece9" stroke="#e2c0b9"/>
+    <text x="732" y="258" fill="#7d4036" font-size="26" font-weight="700">按 6 维评分</text>
+    <text x="732" y="298" fill="#765851" font-size="18">自然 / 平台感 / 具体</text>
+    <text x="732" y="326" fill="#765851" font-size="18">可发布 / 可操作 / 安全</text>
+
+    <rect x="1004" y="214" width="210" height="136" rx="8" fill="#edf2f7" stroke="#c8d4e1"/>
+    <text x="1032" y="258" fill="#334761" font-size="26" font-weight="700">判断去留</text>
+    <text x="1032" y="298" fill="#596a7d" font-size="18">6/10 通过</text>
+    <text x="1032" y="326" fill="#596a7d" font-size="18">再接 AI 接口</text>
+
+    <path d="M366 282 L392 282" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M666 282 L692 282" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M966 282 L992 282" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M388 272 L402 282 L388 292" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M688 272 L702 282 L688 292" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M988 272 L1002 282 L988 292" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="104" y="424" fill="#1f272d" font-size="30" font-weight="700">评分表结构</text>
+    <rect x="104" y="462" width="1110" height="190" rx="8" fill="#fbfcfb" stroke="#dadfd6"/>
+    <text x="132" y="510" fill="#1f272d" font-size="20" font-weight="700">自然度</text>
+    <text x="302" y="510" fill="#1f272d" font-size="20" font-weight="700">平台感</text>
+    <text x="472" y="510" fill="#1f272d" font-size="20" font-weight="700">具体度</text>
+    <text x="642" y="510" fill="#1f272d" font-size="20" font-weight="700">可发布</text>
+    <text x="812" y="510" fill="#1f272d" font-size="20" font-weight="700">可操作</text>
+    <text x="982" y="510" fill="#1f272d" font-size="20" font-weight="700">安全感</text>
+
+    <text x="132" y="555" fill="#65716d" font-size="18">不像机器</text>
+    <text x="302" y="555" fill="#65716d" font-size="18">像小红书/抖音</text>
+    <text x="472" y="555" fill="#65716d" font-size="18">结合素材</text>
+    <text x="642" y="555" fill="#65716d" font-size="18">轻改能发</text>
+    <text x="812" y="555" fill="#65716d" font-size="18">能照着拍/写</text>
+    <text x="982" y="555" fill="#65716d" font-size="18">不夸大焦虑</text>
+
+    <text x="132" y="606" fill="#2f7d68" font-size="22" font-weight="700">每项 1-5 分，平均 3.8 分以上且“可发布”不低于 4 分，视为通过。</text>
+
+    <rect x="104" y="696" width="1110" height="46" rx="8" fill="#1f272d"/>
+    <text x="132" y="725" fill="#ffffff" font-size="20">验证目标：不是证明原型完美，而是找出哪个用户场景最值得先做。</text>
+  </g>
+</svg>

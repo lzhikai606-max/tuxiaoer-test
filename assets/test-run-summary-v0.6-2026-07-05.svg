@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="780" viewBox="0 0 1360 780" role="img" aria-labelledby="title desc">
+  <title id="title">图小二 V0.6 测试结果汇总</title>
+  <desc id="desc">2026-07-05 图小二 V0.6 模拟 AI 优化后 10 组测试样例评分结果。</desc>
+  <rect width="1360" height="780" fill="#f6f5f0"/>
+  <rect x="64" y="56" width="1232" height="668" rx="10" fill="#ffffff" stroke="#dad7cc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="104" y="126" fill="#1f272d" font-size="42" font-weight="700">V0.6 测试结果：10 组通过</text>
+    <text x="104" y="164" fill="#65716d" font-size="20">按任务和场景重写生成逻辑后，内容具体度、平台感和可发布性明显提升。</text>
+
+    <rect x="104" y="214" width="300" height="150" rx="8" fill="#eaf4f0" stroke="#bdd8cd"/>
+    <text x="132" y="270" fill="#2f7d68" font-size="52" font-weight="800">10 / 10</text>
+    <text x="132" y="314" fill="#5e706b" font-size="22" font-weight="700">通过样例</text>
+    <text x="132" y="342" fill="#5e706b" font-size="17">达到接入真实 AI 的门槛</text>
+
+    <rect x="454" y="214" width="300" height="150" rx="8" fill="#edf2f7" stroke="#c8d4e1"/>
+    <text x="482" y="270" fill="#334761" font-size="52" font-weight="800">4.2</text>
+    <text x="482" y="314" fill="#596a7d" font-size="22" font-weight="700">平均评分约值</text>
+    <text x="482" y="342" fill="#596a7d" font-size="17">高于 3.8 通过线</text>
+
+    <rect x="804" y="214" width="300" height="150" rx="8" fill="#fff5de" stroke="#ead091"/>
+    <text x="832" y="270" fill="#7a571e" font-size="52" font-weight="800">脚本</text>
+    <text x="832" y="314" fill="#746143" font-size="22" font-weight="700">表现最稳</text>
+    <text x="832" y="342" fill="#746143" font-size="17">小店、服务、健康类都可继续</text>
+
+    <text x="104" y="438" fill="#1f272d" font-size="30" font-weight="700">本轮改进点</text>
+    <rect x="104" y="476" width="1110" height="160" rx="8" fill="#fbfcfb" stroke="#dadfd6"/>
+    <text x="132" y="524" fill="#1f272d" font-size="20" font-weight="700">1. 按场景生成</text>
+    <text x="132" y="558" fill="#65716d" font-size="18">珍珠耳环、开衫、辅食、美甲、甜品、收纳等都有专属细节。</text>
+    <text x="132" y="600" fill="#1f272d" font-size="20" font-weight="700">2. 按任务输出</text>
+    <text x="132" y="634" fill="#65716d" font-size="18">笔记、脚本、封面标题、一周选题的结构被拆开处理。</text>
+
+    <text x="650" y="524" fill="#1f272d" font-size="20" font-weight="700">3. 可发布性提升</text>
+    <text x="650" y="558" fill="#65716d" font-size="18">多数内容已经能轻度修改后发布，尤其是抖音脚本。</text>
+    <text x="650" y="600" fill="#1f272d" font-size="20" font-weight="700">4. 安全边界保留</text>
+    <text x="650" y="634" fill="#65716d" font-size="18">育儿、健康类仍保持不夸大、不承诺、不制造焦虑。</text>
+
+    <rect x="104" y="668" width="1110" height="46" rx="8" fill="#1f272d"/>
+    <text x="132" y="697" fill="#ffffff" font-size="20">下一步：可以准备接真实 AI，但建议先从“抖音脚本 + 小店/服务型创作者”切入。</text>
+  </g>
+</svg>

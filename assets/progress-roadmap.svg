@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">图小二项目推进路线图</title>
+  <desc id="desc">展示图小二项目从现状核验到可演示版本的四阶段推进方案。</desc>
+  <rect width="1200" height="620" fill="#f7f5ef"/>
+  <rect x="70" y="64" width="1060" height="492" rx="8" fill="#ffffff" stroke="#d8d3c6"/>
+  <text x="96" y="122" fill="#20242a" font-family="PingFang SC, Arial, sans-serif" font-size="38" font-weight="700">图小二项目推进路线图</text>
+  <text x="96" y="162" fill="#68717c" font-family="PingFang SC, Arial, sans-serif" font-size="20">当前目录为空，先完成资产归档与目标澄清，再进入原型、核心功能和交付闭环。</text>
+
+  <line x1="168" y1="310" x2="1028" y2="310" stroke="#2c7a7b" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="188" cy="310" r="38" fill="#2c7a7b"/>
+  <circle cx="468" cy="310" r="38" fill="#f2b84b"/>
+  <circle cx="748" cy="310" r="38" fill="#db6b4f"/>
+  <circle cx="1008" cy="310" r="38" fill="#465a69"/>
+
+  <text x="176" y="321" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">1</text>
+  <text x="456" y="321" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">2</text>
+  <text x="736" y="321" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">3</text>
+  <text x="996" y="321" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">4</text>
+
+  <g font-family="PingFang SC, Arial, sans-serif">
+    <text x="118" y="236" fill="#20242a" font-size="24" font-weight="700">现状核验</text>
+    <text x="104" y="374" fill="#68717c" font-size="18">目录、截图、材料清单</text>
+    <text x="104" y="402" fill="#68717c" font-size="18">形成项目基线</text>
+
+    <text x="398" y="236" fill="#20242a" font-size="24" font-weight="700">定位与原型</text>
+    <text x="380" y="374" fill="#68717c" font-size="18">用户场景、功能边界</text>
+    <text x="380" y="402" fill="#68717c" font-size="18">低保真/高保真页面</text>
+
+    <text x="676" y="236" fill="#20242a" font-size="24" font-weight="700">核心开发</text>
+    <text x="660" y="374" fill="#68717c" font-size="18">MVP功能、数据流</text>
+    <text x="660" y="402" fill="#68717c" font-size="18">测试与体验修正</text>
+
+    <text x="936" y="236" fill="#20242a" font-size="24" font-weight="700">演示交付</text>
+    <text x="918" y="374" fill="#68717c" font-size="18">可演示版本、文档</text>
+    <text x="918" y="402" fill="#68717c" font-size="18">后续迭代清单</text>
+  </g>
+
+  <rect x="96" y="462" width="1008" height="56" rx="8" fill="#eef6f6" stroke="#c6dddd"/>
+  <text x="122" y="498" fill="#2c4a4b" font-family="PingFang SC, Arial, sans-serif" font-size="20">建议节奏：第 1 天完成材料补齐与需求确认；第 2-3 天完成原型；第 4-7 天完成 MVP；第 8 天形成演示与复盘。</text>
+</svg>

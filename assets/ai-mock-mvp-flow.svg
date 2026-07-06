@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="840" viewBox="0 0 1360 840" role="img" aria-labelledby="title desc">
+  <title id="title">图小二 AI 模拟 MVP 流程</title>
+  <desc id="desc">展示图小二从模板原型升级到模拟 AI JSON，再接真实 AI 接口的过程。</desc>
+  <rect width="1360" height="840" fill="#f6f5f0"/>
+  <rect x="64" y="56" width="1232" height="728" rx="10" fill="#ffffff" stroke="#dad7cc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="104" y="126" fill="#1f272d" font-size="42" font-weight="700">V0.5：先跑通 AI 形态，再接真实接口</text>
+    <text x="104" y="164" fill="#65716d" font-size="20">用本地模拟 AI 返回结构化 JSON，验证前端解析、兜底、复制和评分流程。</text>
+
+    <rect x="104" y="224" width="230" height="140" rx="8" fill="#eaf4f0" stroke="#bdd8cd"/>
+    <text x="132" y="268" fill="#2f7d68" font-size="25" font-weight="700">1. 结构化输入</text>
+    <text x="132" y="308" fill="#5e706b" font-size="18">账号定位 / 平台</text>
+    <text x="132" y="336" fill="#5e706b" font-size="18">任务 / 语气 / 想法</text>
+
+    <rect x="394" y="224" width="230" height="140" rx="8" fill="#fff5de" stroke="#ead091"/>
+    <text x="422" y="268" fill="#7a571e" font-size="25" font-weight="700">2. 模拟 AI</text>
+    <text x="422" y="308" fill="#746143" font-size="18">返回 JSON</text>
+    <text x="422" y="336" fill="#746143" font-size="18">保留真实接口形态</text>
+
+    <rect x="684" y="224" width="230" height="140" rx="8" fill="#f7ece9" stroke="#e2c0b9"/>
+    <text x="712" y="268" fill="#7d4036" font-size="25" font-weight="700">3. 前端解析</text>
+    <text x="712" y="308" fill="#765851" font-size="18">JSON -> 结果卡片</text>
+    <text x="712" y="336" fill="#765851" font-size="18">编辑 / 复制 / 保存</text>
+
+    <rect x="974" y="224" width="230" height="140" rx="8" fill="#edf2f7" stroke="#c8d4e1"/>
+    <text x="1002" y="268" fill="#334761" font-size="25" font-weight="700">4. 真实 AI</text>
+    <text x="1002" y="308" fill="#596a7d" font-size="18">替换请求层</text>
+    <text x="1002" y="336" fill="#596a7d" font-size="18">页面结构不变</text>
+
+    <path d="M346 294 L382 294" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M636 294 L672 294" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M926 294 L962 294" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M378 284 L392 294 L378 304" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M668 284 L682 294 L668 304" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M958 284 L972 294 L958 304" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="104" y="434" fill="#1f272d" font-size="30" font-weight="700">为什么先做模拟 AI</text>
+    <rect x="104" y="474" width="1110" height="190" rx="8" fill="#fbfcfb" stroke="#dadfd6"/>
+    <text x="132" y="522" fill="#1f272d" font-size="20" font-weight="700">降低风险</text>
+    <text x="342" y="522" fill="#1f272d" font-size="20" font-weight="700">固定格式</text>
+    <text x="552" y="522" fill="#1f272d" font-size="20" font-weight="700">验证体验</text>
+    <text x="762" y="522" fill="#1f272d" font-size="20" font-weight="700">方便替换</text>
+    <text x="972" y="522" fill="#1f272d" font-size="20" font-weight="700">控制成本</text>
+
+    <text x="132" y="568" fill="#65716d" font-size="18">不急着烧接口</text>
+    <text x="342" y="568" fill="#65716d" font-size="18">先定 JSON</text>
+    <text x="552" y="568" fill="#65716d" font-size="18">结果能否好用</text>
+    <text x="762" y="568" fill="#65716d" font-size="18">只换请求函数</text>
+    <text x="972" y="568" fill="#65716d" font-size="18">测完再付费</text>
+
+    <text x="132" y="622" fill="#2f7d68" font-size="22" font-weight="700">本阶段验收：模拟 AI 模式下，10 组样例仍能正常生成、评分、复制、保存。</text>
+
+    <rect x="104" y="704" width="1110" height="46" rx="8" fill="#1f272d"/>
+    <text x="132" y="733" fill="#ffffff" font-size="20">下一步：6 组以上通过后，把 simulateAIResponse() 替换为真实 API 请求。</text>
+  </g>
+</svg>

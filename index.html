@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图小二 - 创作者内容助手</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">V0.6 原型</p>
+          <h1>图小二</h1>
+        </div>
+        <nav class="top-actions" aria-label="页面操作">
+          <a class="ghost-link" href="docs/content-presentation-plan.md">方案</a>
+          <a class="ghost-link" href="docs/mvp-scope.md">MVP</a>
+          <a class="ghost-link" href="docs/next-improvement-plan.md">完善</a>
+          <a class="ghost-link" href="docs/test-samples.md">测试</a>
+          <a class="ghost-link" href="docs/next-step-plan.md">下一步</a>
+          <a class="ghost-link" href="docs/prompt-structure.md">Prompt</a>
+          <a class="ghost-link" href="docs/ai-integration-plan.md">AI</a>
+          <a class="ghost-link" href="docs/ai-mock-mvp.md">模拟</a>
+        </nav>
+      </header>
+
+      <main class="workspace">
+        <section class="creator-panel" aria-labelledby="workspace-title">
+          <div class="intro">
+            <p class="eyebrow">今天想发什么？</p>
+            <h2 id="workspace-title">上传图片或写一句想法，图小二帮你整理成内容。</h2>
+          </div>
+
+          <div class="task-grid" role="list" aria-label="内容任务">
+            <button class="task-card active" type="button" data-task="note" role="listitem">
+              <span class="task-mark">笔</span>
+              <strong>小红书笔记</strong>
+              <span>生活分享、商品种草、经验总结</span>
+            </button>
+            <button class="task-card" type="button" data-task="script" role="listitem">
+              <span class="task-mark coral">影</span>
+              <strong>抖音脚本</strong>
+              <span>开场、口播、镜头提示、互动结尾</span>
+            </button>
+            <button class="task-card" type="button" data-task="cover" role="listitem">
+              <span class="task-mark blue">题</span>
+              <strong>封面标题</strong>
+              <span>更容易被点开的封面短句</span>
+            </button>
+            <button class="task-card" type="button" data-task="plan" role="listitem">
+              <span class="task-mark dark">排</span>
+              <strong>一周选题</strong>
+              <span>根据账号方向安排 7 天内容</span>
+            </button>
+          </div>
+
+          <form class="compose-form" id="composeForm">
+            <div class="form-row">
+              <fieldset>
+                <legend>平台</legend>
+                <div class="segmented" role="radiogroup" aria-label="平台">
+                  <label>
+                    <input type="radio" name="platform" value="小红书" checked />
+                    <span>小红书</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="platform" value="抖音" />
+                    <span>抖音</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>语气</legend>
+                <div class="tone-list" role="radiogroup" aria-label="语气">
+                  <label>
+                    <input type="radio" name="tone" value="真实分享" checked />
+                    <span>真实分享</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="tone" value="温柔种草" />
+                    <span>温柔种草</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="tone" value="专业建议" />
+                    <span>专业建议</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="tone" value="轻松口播" />
+                    <span>轻松口播</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>生成模式</legend>
+                <div class="segmented" role="radiogroup" aria-label="生成模式">
+                  <label>
+                    <input type="radio" name="generationMode" value="模拟 AI" checked />
+                    <span>模拟 AI</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="generationMode" value="模板" />
+                    <span>模板</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <label class="profile-box" for="profileInput">
+              <span>账号定位</span>
+              <input
+                id="profileInput"
+                type="text"
+                value="我是一个做饰品分享的小店主，主要发通勤搭配和温柔种草内容。"
+              />
+            </label>
+
+            <div class="input-grid">
+              <label class="upload-box" for="imageInput">
+                <input id="imageInput" type="file" accept="image/*" />
+                <span class="upload-icon">+</span>
+                <strong>上传素材图</strong>
+                <small>商品图、生活图、案例图都可以</small>
+                <img id="previewImage" alt="" />
+              </label>
+
+              <label class="idea-box" for="ideaInput">
+                <span>写一句想法</span>
+                <textarea id="ideaInput" rows="7">这款珍珠耳环适合通勤，想发一篇自然一点的小红书种草。</textarea>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="primary-button" type="submit">生成内容</button>
+              <button class="secondary-button" type="button" id="sampleButton">换个示例</button>
+            </div>
+          </form>
+        </section>
+
+        <div class="side-stack">
+          <aside class="history-panel" aria-labelledby="history-title">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">本地保存</p>
+                <h2 id="history-title">最近内容</h2>
+              </div>
+              <button class="icon-button" type="button" id="clearHistoryButton" aria-label="清空历史">清</button>
+            </div>
+            <div class="history-list" id="historyList"></div>
+          </aside>
+
+          <aside class="validation-panel" aria-labelledby="validation-title">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">真实样例</p>
+                <h2 id="validation-title">测试打分</h2>
+              </div>
+            </div>
+            <label class="select-box" for="testCaseSelect">
+              <span>选择样例</span>
+              <select id="testCaseSelect"></select>
+            </label>
+            <button class="primary-button full" type="button" id="loadTestCaseButton">载入样例并生成</button>
+            <div class="score-grid" aria-label="评分维度">
+              <label>自然度<select class="score-select" data-score="natural"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
+              <label>平台感<select class="score-select" data-score="platform"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
+              <label>具体度<select class="score-select" data-score="specific"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
+              <label>可发布<select class="score-select" data-score="publishable"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
+              <label>可操作<select class="score-select" data-score="actionable"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
+              <label>安全感<select class="score-select" data-score="safe"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
+            </div>
+            <div class="score-summary" id="scoreSummary">平均 4.0 · 通过</div>
+            <button class="secondary-button full" type="button" id="saveScoreButton">保存评分</button>
+            <div class="score-history" id="scoreHistory"></div>
+          </aside>
+
+          <aside class="prompt-panel" aria-labelledby="prompt-title">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">接 AI 前</p>
+                <h2 id="prompt-title">Prompt 预览</h2>
+              </div>
+            </div>
+            <textarea class="prompt-preview" id="promptPreview" rows="10" readonly></textarea>
+            <button class="secondary-button full" type="button" id="copyPromptButton">复制 Prompt JSON</button>
+          </aside>
+
+          <aside class="ai-panel" aria-labelledby="ai-response-title">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">模拟 AI</p>
+                <h2 id="ai-response-title">AI 响应 JSON</h2>
+              </div>
+            </div>
+            <textarea class="prompt-preview" id="aiResponsePreview" rows="10" readonly></textarea>
+            <button class="secondary-button full" type="button" id="copyAiResponseButton">复制 AI JSON</button>
+          </aside>
+        </div>
+
+        <section class="result-panel" aria-labelledby="result-title">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">生成结果</p>
+              <h2 id="result-title">可复制、可改写、可继续发布</h2>
+            </div>
+            <div class="result-actions">
+              <span class="status-pill" id="resultMeta">小红书 · 真实分享</span>
+              <button class="secondary-button compact" type="button" id="copyAllButton">整篇复制</button>
+              <button class="secondary-button compact" type="button" id="softenButton">更自然</button>
+              <button class="secondary-button compact" type="button" id="shortenButton">缩短一点</button>
+            </div>
+          </div>
+          <div class="result-grid" id="resultGrid"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

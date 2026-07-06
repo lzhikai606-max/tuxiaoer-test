@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="860" viewBox="0 0 1360 860" role="img" aria-labelledby="title desc">
+  <title id="title">图小二下一步执行方案</title>
+  <desc id="desc">展示图小二从真实样例测试到场景收敛、Prompt优化、AI接口接入和小范围试用的下一步执行路线。</desc>
+  <rect width="1360" height="860" fill="#f6f5f0"/>
+  <rect x="64" y="56" width="1232" height="748" rx="10" fill="#ffffff" stroke="#dad7cc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="104" y="126" fill="#1f272d" font-size="42" font-weight="700">图小二下一步：先验证，再接 AI</text>
+    <text x="104" y="164" fill="#65716d" font-size="20">不要急着做登录、支付和大功能；先用真实素材判断哪个用户场景最值得做。</text>
+
+    <rect x="104" y="218" width="220" height="138" rx="8" fill="#eaf4f0" stroke="#bdd8cd"/>
+    <text x="130" y="260" fill="#2f7d68" font-size="25" font-weight="700">1. 收集样例</text>
+    <text x="130" y="300" fill="#5e706b" font-size="18">10 组真实素材</text>
+    <text x="130" y="328" fill="#5e706b" font-size="18">小店店主 / 宝妈优先</text>
+
+    <rect x="374" y="218" width="220" height="138" rx="8" fill="#fff5de" stroke="#ead091"/>
+    <text x="400" y="260" fill="#7a571e" font-size="25" font-weight="700">2. 跑测试</text>
+    <text x="400" y="300" fill="#746143" font-size="18">逐条输入原型</text>
+    <text x="400" y="328" fill="#746143" font-size="18">按 6 维打分</text>
+
+    <rect x="644" y="218" width="220" height="138" rx="8" fill="#f7ece9" stroke="#e2c0b9"/>
+    <text x="670" y="260" fill="#7d4036" font-size="25" font-weight="700">3. 收敛场景</text>
+    <text x="670" y="300" fill="#765851" font-size="18">选通过率最高人群</text>
+    <text x="670" y="328" fill="#765851" font-size="18">定首发核心任务</text>
+
+    <rect x="914" y="218" width="220" height="138" rx="8" fill="#edf2f7" stroke="#c8d4e1"/>
+    <text x="940" y="260" fill="#334761" font-size="25" font-weight="700">4. 接入 AI</text>
+    <text x="940" y="300" fill="#596a7d" font-size="18">Prompt 结构化</text>
+    <text x="940" y="328" fill="#596a7d" font-size="18">替换模板生成</text>
+
+    <path d="M336 287 L362 287" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M606 287 L632 287" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M876 287 L902 287" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M358 277 L372 287 L358 297" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M628 277 L642 287 L628 297" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M898 277 L912 287 L898 297" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="104" y="430" fill="#1f272d" font-size="30" font-weight="700">7 天执行节奏</text>
+    <rect x="104" y="468" width="1110" height="182" rx="8" fill="#fbfcfb" stroke="#dadfd6"/>
+    <line x1="144" y1="556" x2="1174" y2="556" stroke="#cbd7cf" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="174" cy="556" r="18" fill="#2f7d68"/>
+    <circle cx="336" cy="556" r="18" fill="#d46f55"/>
+    <circle cx="498" cy="556" r="18" fill="#526f94"/>
+    <circle cx="660" cy="556" r="18" fill="#c7962d"/>
+    <circle cx="822" cy="556" r="18" fill="#2f7d68"/>
+    <circle cx="984" cy="556" r="18" fill="#7d4036"/>
+    <circle cx="1146" cy="556" r="18" fill="#27313a"/>
+
+    <text x="132" y="522" fill="#1f272d" font-size="19" font-weight="700">D1</text>
+    <text x="294" y="522" fill="#1f272d" font-size="19" font-weight="700">D2</text>
+    <text x="456" y="522" fill="#1f272d" font-size="19" font-weight="700">D3</text>
+    <text x="618" y="522" fill="#1f272d" font-size="19" font-weight="700">D4</text>
+    <text x="780" y="522" fill="#1f272d" font-size="19" font-weight="700">D5</text>
+    <text x="942" y="522" fill="#1f272d" font-size="19" font-weight="700">D6</text>
+    <text x="1104" y="522" fill="#1f272d" font-size="19" font-weight="700">D7</text>
+
+    <text x="118" y="612" fill="#65716d" font-size="17">定主用户</text>
+    <text x="276" y="612" fill="#65716d" font-size="17">补样例</text>
+    <text x="430" y="612" fill="#65716d" font-size="17">跑 10 组</text>
+    <text x="604" y="612" fill="#65716d" font-size="17">复盘打分</text>
+    <text x="754" y="612" fill="#65716d" font-size="17">改 Prompt</text>
+    <text x="914" y="612" fill="#65716d" font-size="17">接 AI</text>
+    <text x="1076" y="612" fill="#65716d" font-size="17">小范围试用</text>
+
+    <rect x="104" y="698" width="1110" height="46" rx="8" fill="#1f272d"/>
+    <text x="132" y="727" fill="#ffffff" font-size="20">关键决策：10 组样例中 6 组通过，才进入真实 AI 接口开发；否则先收窄用户和场景。</text>
+  </g>
+</svg>

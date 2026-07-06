@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="860" viewBox="0 0 1360 860" role="img" aria-labelledby="title desc">
+  <title id="title">图小二下一阶段完善路线图</title>
+  <desc id="desc">展示图小二从真实样例、质量标准、提示词结构、可编辑结果到真实接口的完善路线。</desc>
+  <rect width="1360" height="860" fill="#f6f5f0"/>
+  <rect x="64" y="56" width="1232" height="748" rx="10" fill="#ffffff" stroke="#d9d6cc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="104" y="126" fill="#1f272d" font-size="42" font-weight="700">图小二下一阶段完善路线</text>
+    <text x="104" y="164" fill="#66726f" font-size="20">从“能演示”推进到“能判断是否值得继续做”，重点验证真实用户、真实素材和生成质量。</text>
+
+    <rect x="104" y="220" width="230" height="142" rx="8" fill="#eaf4f0" stroke="#bdd8cd"/>
+    <text x="130" y="264" fill="#286250" font-size="25" font-weight="700">1. 真实样例</text>
+    <text x="130" y="304" fill="#5e706b" font-size="18">10 组素材 + 想法</text>
+    <text x="130" y="332" fill="#5e706b" font-size="18">覆盖宝妈、店主、服务者</text>
+
+    <rect x="386" y="220" width="230" height="142" rx="8" fill="#fff5de" stroke="#ead091"/>
+    <text x="412" y="264" fill="#7a571e" font-size="25" font-weight="700">2. 质量标准</text>
+    <text x="412" y="304" fill="#746143" font-size="18">自然、不硬广</text>
+    <text x="412" y="332" fill="#746143" font-size="18">可复制、可发布</text>
+
+    <rect x="668" y="220" width="230" height="142" rx="8" fill="#f7ece9" stroke="#e2c0b9"/>
+    <text x="694" y="264" fill="#7d4036" font-size="25" font-weight="700">3. Prompt 结构</text>
+    <text x="694" y="304" fill="#765851" font-size="18">平台 + 人设 + 素材</text>
+    <text x="694" y="332" fill="#765851" font-size="18">任务 + 语气 + 格式</text>
+
+    <rect x="950" y="220" width="230" height="142" rx="8" fill="#edf2f7" stroke="#c8d4e1"/>
+    <text x="976" y="264" fill="#334761" font-size="25" font-weight="700">4. 可编辑结果</text>
+    <text x="976" y="304" fill="#596a7d" font-size="18">复制 / 改写 / 缩短</text>
+    <text x="976" y="332" fill="#596a7d" font-size="18">整篇保存到历史</text>
+
+    <path d="M346 291 L374 291" stroke="#88938e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M628 291 L656 291" stroke="#88938e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M910 291 L938 291" stroke="#88938e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M370 280 L384 291 L370 302" fill="none" stroke="#88938e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M652 280 L666 291 L652 302" fill="none" stroke="#88938e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M934 280 L948 291 L934 302" fill="none" stroke="#88938e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="104" y="436" fill="#1f272d" font-size="30" font-weight="700">呈现形式升级</text>
+    <rect x="104" y="474" width="1090" height="190" rx="8" fill="#fbfcfb" stroke="#dadfd6"/>
+    <line x1="150" y1="564" x2="1146" y2="564" stroke="#cbd7cf" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="180" cy="564" r="18" fill="#2f7d68"/>
+    <circle cx="380" cy="564" r="18" fill="#d46f55"/>
+    <circle cx="580" cy="564" r="18" fill="#526f94"/>
+    <circle cx="780" cy="564" r="18" fill="#c7962d"/>
+    <circle cx="980" cy="564" r="18" fill="#27313a"/>
+
+    <text x="136" y="528" fill="#1f272d" font-size="20" font-weight="700">账号定位</text>
+    <text x="330" y="528" fill="#1f272d" font-size="20" font-weight="700">素材输入</text>
+    <text x="530" y="528" fill="#1f272d" font-size="20" font-weight="700">生成结果</text>
+    <text x="730" y="528" fill="#1f272d" font-size="20" font-weight="700">编辑改写</text>
+    <text x="928" y="528" fill="#1f272d" font-size="20" font-weight="700">复制发布</text>
+
+    <text x="116" y="620" fill="#63706c" font-size="17">我是谁、发给谁</text>
+    <text x="316" y="620" fill="#63706c" font-size="17">图片、一句话想法</text>
+    <text x="516" y="620" fill="#63706c" font-size="17">标题、正文、脚本</text>
+    <text x="716" y="620" fill="#63706c" font-size="17">更自然、更短</text>
+    <text x="916" y="620" fill="#63706c" font-size="17">整篇或模块复制</text>
+
+    <rect x="104" y="704" width="1090" height="48" rx="8" fill="#1f272d"/>
+    <text x="132" y="735" fill="#ffffff" font-size="20">判断是否进入开发的标准：10 组真实样例里，至少 6 组生成内容能被用户轻度修改后发布。</text>
+  </g>
+</svg>

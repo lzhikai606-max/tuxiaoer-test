@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="820" viewBox="0 0 1320 820" role="img" aria-labelledby="title desc">
+  <title id="title">图小二文字与呈现形式方案</title>
+  <desc id="desc">展示图小二从素材输入到内容生成、结果呈现和发布辅助的产品结构。</desc>
+  <rect width="1320" height="820" fill="#f6f5f0"/>
+  <rect x="64" y="54" width="1192" height="710" rx="10" fill="#ffffff" stroke="#dad7cc"/>
+
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="98" y="120" fill="#1e252b" font-size="42" font-weight="700">图小二：从素材到内容的轻量创作助手</text>
+    <text x="98" y="158" fill="#66727c" font-size="20">面向小红书、抖音创作者，把照片、商品、生活想法转成可发布的笔记、脚本、标题和封面文案。</text>
+
+    <rect x="98" y="208" width="260" height="156" rx="8" fill="#eef5f2" stroke="#bfd8cd"/>
+    <text x="128" y="252" fill="#24584c" font-size="26" font-weight="700">1. 输入素材</text>
+    <text x="128" y="292" fill="#526a64" font-size="18">图片 / 商品 / 生活想法</text>
+    <text x="128" y="322" fill="#526a64" font-size="18">平台 / 人设 / 发布目的</text>
+
+    <rect x="398" y="208" width="260" height="156" rx="8" fill="#fff5de" stroke="#ebd091"/>
+    <text x="428" y="252" fill="#76551c" font-size="26" font-weight="700">2. 选择任务</text>
+    <text x="428" y="292" fill="#725f41" font-size="18">小红书笔记</text>
+    <text x="428" y="322" fill="#725f41" font-size="18">抖音脚本 / 选题计划</text>
+
+    <rect x="698" y="208" width="260" height="156" rx="8" fill="#f7ecea" stroke="#e4c2bd"/>
+    <text x="728" y="252" fill="#7e4037" font-size="26" font-weight="700">3. AI 生成</text>
+    <text x="728" y="292" fill="#765953" font-size="18">标题 / 正文 / 标签</text>
+    <text x="728" y="322" fill="#765953" font-size="18">封面句 / 口播脚本</text>
+
+    <rect x="998" y="208" width="220" height="156" rx="8" fill="#edf1f7" stroke="#c9d3e0"/>
+    <text x="1028" y="252" fill="#31445c" font-size="26" font-weight="700">4. 发布辅助</text>
+    <text x="1028" y="292" fill="#586779" font-size="18">复制 / 保存 / 改写</text>
+    <text x="1028" y="322" fill="#586779" font-size="18">形成内容记录</text>
+
+    <path d="M370 286 L388 286" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M670 286 L688 286" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M970 286 L988 286" stroke="#89928c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M386 276 L398 286 L386 296" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M686 276 L698 286 L686 296" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M986 276 L998 286 L986 296" fill="none" stroke="#89928c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="98" y="432" fill="#1e252b" font-size="30" font-weight="700">核心呈现：四个轻入口</text>
+
+    <rect x="98" y="466" width="260" height="170" rx="8" fill="#fbfcfb" stroke="#d9dfd6"/>
+    <text x="124" y="508" fill="#1e252b" font-size="24" font-weight="700">小红书笔记</text>
+    <text x="124" y="546" fill="#64706c" font-size="18">标题 3 个</text>
+    <text x="124" y="574" fill="#64706c" font-size="18">正文 1 篇</text>
+    <text x="124" y="602" fill="#64706c" font-size="18">封面文案 + 标签</text>
+
+    <rect x="398" y="466" width="260" height="170" rx="8" fill="#fbfcfb" stroke="#d9dfd6"/>
+    <text x="424" y="508" fill="#1e252b" font-size="24" font-weight="700">抖音脚本</text>
+    <text x="424" y="546" fill="#64706c" font-size="18">开场钩子</text>
+    <text x="424" y="574" fill="#64706c" font-size="18">口播内容</text>
+    <text x="424" y="602" fill="#64706c" font-size="18">镜头提示 + 结尾引导</text>
+
+    <rect x="698" y="466" width="260" height="170" rx="8" fill="#fbfcfb" stroke="#d9dfd6"/>
+    <text x="724" y="508" fill="#1e252b" font-size="24" font-weight="700">封面标题</text>
+    <text x="724" y="546" fill="#64706c" font-size="18">封面短句</text>
+    <text x="724" y="574" fill="#64706c" font-size="18">点击理由</text>
+    <text x="724" y="602" fill="#64706c" font-size="18">不同语气版本</text>
+
+    <rect x="998" y="466" width="220" height="170" rx="8" fill="#fbfcfb" stroke="#d9dfd6"/>
+    <text x="1024" y="508" fill="#1e252b" font-size="24" font-weight="700">选题计划</text>
+    <text x="1024" y="546" fill="#64706c" font-size="18">一周发布表</text>
+    <text x="1024" y="574" fill="#64706c" font-size="18">拍摄提示</text>
+    <text x="1024" y="602" fill="#64706c" font-size="18">内容节奏</text>
+
+    <rect x="98" y="680" width="1120" height="44" rx="8" fill="#1e252b"/>
+    <text x="128" y="709" fill="#ffffff" font-size="19">产品表达重点：不强调复杂 AI 能力，而强调“普通人也能持续产出能发布的内容”。</text>
+  </g>
+</svg>

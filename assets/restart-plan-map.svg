@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">图小二项目重启方案图</title>
+  <desc id="desc">图小二项目从重新定位、补齐材料、做原型、开发MVP到上线演示的阶段图。</desc>
+  <rect width="1280" height="760" fill="#f5f7f4"/>
+  <rect x="58" y="50" width="1164" height="660" rx="10" fill="#ffffff" stroke="#d9dfd4"/>
+
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="92" y="116" fill="#172026" font-size="42" font-weight="700">图小二项目重启方案</text>
+    <text x="92" y="154" fill="#66727c" font-size="20">先定清楚“做什么、给谁用、第一版交付什么”，再进入原型、工程和演示闭环。</text>
+
+    <rect x="92" y="196" width="236" height="128" rx="8" fill="#eaf4f1" stroke="#bddbd2"/>
+    <text x="122" y="244" fill="#1e554f" font-size="26" font-weight="700">1. 重新定位</text>
+    <text x="122" y="282" fill="#4f6864" font-size="18">一句话价值</text>
+    <text x="122" y="310" fill="#4f6864" font-size="18">目标用户与使用场景</text>
+
+    <rect x="382" y="196" width="236" height="128" rx="8" fill="#fff5dc" stroke="#ead18d"/>
+    <text x="412" y="244" fill="#75551a" font-size="26" font-weight="700">2. 补齐材料</text>
+    <text x="412" y="282" fill="#756446" font-size="18">聊天记录/参考图</text>
+    <text x="412" y="310" fill="#756446" font-size="18">需求清单/优先级</text>
+
+    <rect x="672" y="196" width="236" height="128" rx="8" fill="#f7ebea" stroke="#e3c0bb"/>
+    <text x="702" y="244" fill="#7b3c34" font-size="26" font-weight="700">3. 做出原型</text>
+    <text x="702" y="282" fill="#765953" font-size="18">核心流程页面</text>
+    <text x="702" y="310" fill="#765953" font-size="18">确认体验与视觉方向</text>
+
+    <rect x="962" y="196" width="236" height="128" rx="8" fill="#edf1f7" stroke="#c9d3e0"/>
+    <text x="992" y="244" fill="#31445c" font-size="26" font-weight="700">4. 开发 MVP</text>
+    <text x="992" y="282" fill="#586779" font-size="18">最小可演示版本</text>
+    <text x="992" y="310" fill="#586779" font-size="18">测试、修正、交付</text>
+
+    <path d="M340 260 L370 260" stroke="#80908f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M630 260 L660 260" stroke="#80908f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M920 260 L950 260" stroke="#80908f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M365 248 L378 260 L365 272" fill="none" stroke="#80908f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M655 248 L668 260 L655 272" fill="none" stroke="#80908f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M945 248 L958 260 L945 272" fill="none" stroke="#80908f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="92" y="390" fill="#172026" font-size="28" font-weight="700">重启后第一周节奏</text>
+    <rect x="92" y="422" width="1106" height="166" rx="8" fill="#fbfcfa" stroke="#dce2d8"/>
+    <line x1="118" y1="497" x2="1168" y2="497" stroke="#cbd8ce" stroke-width="4" stroke-linecap="round"/>
+
+    <circle cx="150" cy="497" r="18" fill="#2f7d68"/>
+    <circle cx="335" cy="497" r="18" fill="#d8a02e"/>
+    <circle cx="520" cy="497" r="18" fill="#c8614c"/>
+    <circle cx="705" cy="497" r="18" fill="#59708c"/>
+    <circle cx="890" cy="497" r="18" fill="#2f7d68"/>
+    <circle cx="1075" cy="497" r="18" fill="#172026"/>
+
+    <text x="116" y="458" fill="#172026" font-size="20" font-weight="700">今天</text>
+    <text x="270" y="458" fill="#172026" font-size="20" font-weight="700">第 1-2 天</text>
+    <text x="455" y="458" fill="#172026" font-size="20" font-weight="700">第 3 天</text>
+    <text x="640" y="458" fill="#172026" font-size="20" font-weight="700">第 4-5 天</text>
+    <text x="825" y="458" fill="#172026" font-size="20" font-weight="700">第 6 天</text>
+    <text x="1010" y="458" fill="#172026" font-size="20" font-weight="700">第 7 天</text>
+
+    <text x="104" y="546" fill="#63706c" font-size="17">定方向</text>
+    <text x="278" y="546" fill="#63706c" font-size="17">补资料</text>
+    <text x="456" y="546" fill="#63706c" font-size="17">画原型</text>
+    <text x="632" y="546" fill="#63706c" font-size="17">搭工程</text>
+    <text x="822" y="546" fill="#63706c" font-size="17">跑流程</text>
+    <text x="1008" y="546" fill="#63706c" font-size="17">做演示</text>
+
+    <rect x="92" y="622" width="1106" height="52" rx="8" fill="#172026"/>
+    <text x="122" y="656" fill="#ffffff" font-size="20">本轮重启目标：7 天内形成一个能打开、能演示、能继续迭代的 V0.1，而不是继续停留在想法阶段。</text>
+  </g>
+</svg>
