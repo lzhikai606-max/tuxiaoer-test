@@ -19,16 +19,23 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
   font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 button,
 textarea,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -71,6 +78,7 @@ button {
 .top-actions {
   display: flex;
   gap: 10px;
+  min-width: 0;
 }
 
 .ghost-link {
@@ -79,6 +87,7 @@ button {
   border-radius: 8px;
   color: var(--ink);
   display: inline-flex;
+  flex: 0 0 auto;
   min-height: 38px;
   padding: 0 14px;
   text-decoration: none;
@@ -88,6 +97,7 @@ button {
   display: grid;
   gap: 18px;
   grid-template-columns: minmax(0, 1fr) 360px;
+  min-width: 0;
 }
 
 .creator-panel,
@@ -255,7 +265,9 @@ legend,
 .profile-box input {
   border: 0;
   color: var(--ink);
+  min-height: 36px;
   outline: 0;
+  width: 100%;
 }
 
 .upload-box,
@@ -318,6 +330,7 @@ legend,
 textarea {
   border: 0;
   color: var(--ink);
+  width: 100%;
   min-height: 158px;
   outline: 0;
   resize: vertical;
@@ -625,6 +638,10 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .side-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .task-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -632,13 +649,75 @@ select {
 
 @media (max-width: 760px) {
   .app-shell {
-    padding: 14px;
+    padding: 12px;
+  }
+
+  .topbar {
+    background: rgba(246, 245, 240, 0.96);
+    gap: 12px;
+    margin: -12px -12px 12px;
+    padding: 12px 12px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
   }
 
   .topbar,
   .panel-head {
-    align-items: stretch;
     flex-direction: column;
+  }
+
+  .topbar h1 {
+    font-size: 28px;
+  }
+
+  .top-actions {
+    margin: 0 -12px;
+    overflow-x: auto;
+    padding: 0 12px 2px;
+    scrollbar-width: none;
+    width: calc(100% + 24px);
+  }
+
+  .top-actions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ghost-link {
+    min-height: 36px;
+    padding: 0 12px;
+  }
+
+  .creator-panel,
+  .history-panel,
+  .validation-panel,
+  .prompt-panel,
+  .ai-panel,
+  .result-panel {
+    box-shadow: 0 10px 26px rgba(31, 39, 45, 0.06);
+  }
+
+  .creator-panel,
+  .result-panel {
+    padding: 16px;
+  }
+
+  .workspace {
+    gap: 12px;
+  }
+
+  .creator-panel {
+    order: 1;
+  }
+
+  .result-panel {
+    order: 2;
+  }
+
+  .side-stack {
+    gap: 12px;
+    grid-template-columns: 1fr;
+    order: 3;
   }
 
   .form-row,
@@ -648,10 +727,165 @@ select {
   }
 
   .task-grid {
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 16px;
+  }
+
+  .task-card {
+    gap: 7px;
+    min-height: 124px;
+    padding: 12px;
+  }
+
+  .task-card strong {
+    font-size: 16px;
+  }
+
+  .task-card span:last-child {
+    font-size: 13px;
+  }
+
+  .task-mark {
+    height: 30px;
+    width: 30px;
+  }
+
+  .intro h2 {
+    font-size: 25px;
+    line-height: 1.22;
+  }
+
+  .compose-form {
+    gap: 14px;
+  }
+
+  .form-row {
+    gap: 14px;
+  }
+
+  .segmented,
+  .tone-list {
+    gap: 7px;
+  }
+
+  .segmented span,
+  .tone-list span,
+  select,
+  .primary-button,
+  .secondary-button,
+  .copy-button,
+  .icon-button {
+    min-height: 44px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  .profile-box,
+  .upload-box,
+  .idea-box,
+  .result-card {
+    padding: 14px;
+  }
+
+  .upload-box,
+  .idea-box {
+    min-height: 168px;
+  }
+
+  textarea {
+    min-height: 142px;
+  }
+
+  .form-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .primary-button,
+  .secondary-button {
+    justify-content: center;
+    padding: 0 14px;
+  }
+
+  .history-panel,
+  .validation-panel,
+  .prompt-panel,
+  .ai-panel {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .panel-head {
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .panel-head h2 {
+    font-size: 20px;
+  }
+
+  .result-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: stretch;
+  }
+
+  .status-pill {
+    justify-content: center;
+    grid-column: 1 / -1;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .secondary-button.compact {
+    min-height: 42px;
+    padding: 0 8px;
+  }
+
+  .result-card-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .result-card h3 {
+    font-size: 17px;
+  }
+
+  .copy-button {
+    width: 100%;
+  }
+
+  .prompt-preview {
+    min-height: 180px;
+  }
+
+  .toast {
+    bottom: 14px;
+    max-width: calc(100vw - 28px);
+    text-align: center;
+    width: max-content;
+  }
+}
+
+@media (max-width: 430px) {
+  .task-grid,
+  .form-actions,
+  .result-actions,
+  .score-grid {
     grid-template-columns: 1fr;
   }
 
   .intro h2 {
-    font-size: 28px;
+    font-size: 23px;
+  }
+
+  .task-card {
+    min-height: 108px;
   }
 }
