@@ -7,214 +7,283 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">V0.6 原型</p>
+    <section class="login-view" id="loginView">
+      <div class="login-card">
+        <div class="brand-block">
+          <p class="eyebrow">创作者内容助手</p>
           <h1>图小二</h1>
+          <p>给宝妈、店主和轻创作者，把素材整理成能发的内容。</p>
         </div>
-        <nav class="top-actions" aria-label="页面操作">
-          <a class="ghost-link" href="docs/content-presentation-plan.md">方案</a>
-          <a class="ghost-link" href="docs/mvp-scope.md">MVP</a>
-          <a class="ghost-link" href="docs/next-improvement-plan.md">完善</a>
-          <a class="ghost-link" href="docs/test-samples.md">测试</a>
-          <a class="ghost-link" href="docs/next-step-plan.md">下一步</a>
-          <a class="ghost-link" href="docs/prompt-structure.md">Prompt</a>
-          <a class="ghost-link" href="docs/ai-integration-plan.md">AI</a>
-          <a class="ghost-link" href="docs/ai-mock-mvp.md">模拟</a>
-        </nav>
+
+        <button class="wechat-button" type="button" id="wechatLoginButton">微信登录</button>
+
+        <div class="phone-login">
+          <label>
+            <span>手机号</span>
+            <input id="phoneInput" type="tel" inputmode="numeric" placeholder="请输入手机号" />
+          </label>
+          <div class="code-row">
+            <label>
+              <span>验证码</span>
+              <input id="codeInput" type="text" inputmode="numeric" placeholder="6 位验证码" />
+            </label>
+            <button class="code-button" type="button" id="sendCodeButton">发送</button>
+          </div>
+          <button class="primary-button full" type="button" id="phoneLoginButton">手机号登录</button>
+        </div>
+
+        <p class="agreement">登录即代表同意用户协议和隐私政策。</p>
+      </div>
+    </section>
+
+    <div class="app-view hidden" id="appView">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow" id="pageEyebrow">首页</p>
+          <h1 id="pageTitle">先选账号</h1>
+        </div>
+        <span class="plan-badge">免费体验</span>
       </header>
 
-      <main class="workspace">
-        <section class="creator-panel" aria-labelledby="workspace-title">
-          <div class="intro">
-            <p class="eyebrow">今天想发什么？</p>
-            <h2 id="workspace-title">上传图片或写一句想法，图小二帮你整理成内容。</h2>
+      <main class="app-main">
+        <section class="app-page active" data-page="home">
+          <div class="hero-card">
+            <p class="eyebrow">第一步</p>
+            <h2>你是谁？要发哪里？</h2>
+            <p>先点选固定信息，后面就不用反复填写。</p>
           </div>
 
-          <div class="task-grid" role="list" aria-label="内容任务">
-            <button class="task-card active" type="button" data-task="note" role="listitem">
-              <span class="task-mark">笔</span>
-              <strong>小红书笔记</strong>
-              <span>生活分享、商品种草、经验总结</span>
-            </button>
-            <button class="task-card" type="button" data-task="script" role="listitem">
-              <span class="task-mark coral">影</span>
-              <strong>抖音脚本</strong>
-              <span>开场、口播、镜头提示、互动结尾</span>
-            </button>
-            <button class="task-card" type="button" data-task="cover" role="listitem">
-              <span class="task-mark blue">题</span>
-              <strong>封面标题</strong>
-              <span>更容易被点开的封面短句</span>
-            </button>
-            <button class="task-card" type="button" data-task="plan" role="listitem">
-              <span class="task-mark dark">排</span>
-              <strong>一周选题</strong>
-              <span>根据账号方向安排 7 天内容</span>
-            </button>
-          </div>
-
-          <form class="compose-form" id="composeForm">
-            <div class="form-row">
-              <fieldset>
-                <legend>平台</legend>
-                <div class="segmented" role="radiogroup" aria-label="平台">
-                  <label>
-                    <input type="radio" name="platform" value="小红书" checked />
-                    <span>小红书</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="platform" value="抖音" />
-                    <span>抖音</span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <fieldset>
-                <legend>语气</legend>
-                <div class="tone-list" role="radiogroup" aria-label="语气">
-                  <label>
-                    <input type="radio" name="tone" value="真实分享" checked />
-                    <span>真实分享</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="tone" value="温柔种草" />
-                    <span>温柔种草</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="tone" value="专业建议" />
-                    <span>专业建议</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="tone" value="轻松口播" />
-                    <span>轻松口播</span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <fieldset>
-                <legend>生成模式</legend>
-                <div class="segmented" role="radiogroup" aria-label="生成模式">
-                  <label>
-                    <input type="radio" name="generationMode" value="模拟 AI" checked />
-                    <span>模拟 AI</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="generationMode" value="模板" />
-                    <span>模板</span>
-                  </label>
-                </div>
-              </fieldset>
+          <fieldset class="choice-group">
+            <legend>你是谁？</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="creatorType" value="宝妈" /><span>宝妈</span></label>
+              <label class="choice"><input type="radio" name="creatorType" value="小店店主" checked /><span>小店店主 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="creatorType" value="美甲/美容店" /><span>美甲/美容店</span></label>
+              <label class="choice"><input type="radio" name="creatorType" value="服装/饰品店" /><span>服装/饰品店</span></label>
+              <label class="choice"><input type="radio" name="creatorType" value="餐饮/甜品店" /><span>餐饮/甜品店</span></label>
+              <label class="choice"><input type="radio" name="creatorType" value="老师/教练" /><span>老师/教练</span></label>
+              <label class="choice"><input type="radio" name="creatorType" value="生活分享" /><span>生活分享</span></label>
             </div>
+          </fieldset>
 
-            <label class="profile-box" for="profileInput">
-              <span>账号定位</span>
-              <input
-                id="profileInput"
-                type="text"
-                value="我是一个做饰品分享的小店主，主要发通勤搭配和温柔种草内容。"
-              />
-            </label>
-
-            <div class="input-grid">
-              <label class="upload-box" for="imageInput">
-                <input id="imageInput" type="file" accept="image/*" />
-                <span class="upload-icon">+</span>
-                <strong>上传素材图</strong>
-                <small>商品图、生活图、案例图都可以</small>
-                <img id="previewImage" alt="" />
-              </label>
-
-              <label class="idea-box" for="ideaInput">
-                <span>写一句想法</span>
-                <textarea id="ideaInput" rows="7">这款珍珠耳环适合通勤，想发一篇自然一点的小红书种草。</textarea>
-              </label>
+          <fieldset class="choice-group">
+            <legend>发哪里？</legend>
+            <div class="choice-grid compact">
+              <label class="choice"><input type="radio" name="platform" value="小红书" checked /><span>小红书 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="platform" value="抖音" /><span>抖音</span></label>
+              <label class="choice"><input type="radio" name="platform" value="朋友圈" /><span>朋友圈</span></label>
+              <label class="choice"><input type="radio" name="platform" value="视频号" /><span>视频号</span></label>
             </div>
+          </fieldset>
 
-            <div class="form-actions">
-              <button class="primary-button" type="submit">生成内容</button>
-              <button class="secondary-button" type="button" id="sampleButton">换个示例</button>
+          <fieldset class="choice-group">
+            <legend>风格</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="tone" value="真实记录" checked /><span>真实记录 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="tone" value="温柔种草" /><span>温柔种草</span></label>
+              <label class="choice"><input type="radio" name="tone" value="到店引导" /><span>到店引导</span></label>
+              <label class="choice"><input type="radio" name="tone" value="专业建议" /><span>专业建议</span></label>
+              <label class="choice"><input type="radio" name="tone" value="轻松口播" /><span>轻松口播</span></label>
             </div>
-          </form>
+          </fieldset>
+
+          <label class="text-box" for="accountNote">
+            <span>补充一句（可不填）</span>
+            <input id="accountNote" type="text" placeholder="例如：我主要卖饰品，想发通勤搭配。" />
+          </label>
+
+          <button class="primary-button full" type="button" data-go-page="material">下一步：上传素材</button>
         </section>
 
-        <div class="side-stack">
-          <aside class="history-panel" aria-labelledby="history-title">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">本地保存</p>
-                <h2 id="history-title">最近内容</h2>
-              </div>
-              <button class="icon-button" type="button" id="clearHistoryButton" aria-label="清空历史">清</button>
-            </div>
-            <div class="history-list" id="historyList"></div>
-          </aside>
+        <section class="app-page" data-page="material">
+          <div class="hero-card">
+            <p class="eyebrow">第二步</p>
+            <h2>今天手里有什么？</h2>
+            <p>直接点选素材类型，不用自己想怎么描述。</p>
+          </div>
 
-          <aside class="validation-panel" aria-labelledby="validation-title">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">真实样例</p>
-                <h2 id="validation-title">测试打分</h2>
-              </div>
+          <fieldset class="choice-group">
+            <legend>素材类型</legend>
+            <div class="choice-grid compact">
+              <label class="choice"><input type="radio" name="materialType" value="只有文字" /><span>只有文字</span></label>
+              <label class="choice"><input type="radio" name="materialType" value="有图片" checked /><span>有图片 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="materialType" value="有视频" /><span>有视频</span></label>
+              <label class="choice"><input type="radio" name="materialType" value="图片 + 视频" /><span>图片 + 视频</span></label>
             </div>
-            <label class="select-box" for="testCaseSelect">
-              <span>选择样例</span>
-              <select id="testCaseSelect"></select>
-            </label>
-            <button class="primary-button full" type="button" id="loadTestCaseButton">载入样例并生成</button>
-            <div class="score-grid" aria-label="评分维度">
-              <label>自然度<select class="score-select" data-score="natural"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
-              <label>平台感<select class="score-select" data-score="platform"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
-              <label>具体度<select class="score-select" data-score="specific"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
-              <label>可发布<select class="score-select" data-score="publishable"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
-              <label>可操作<select class="score-select" data-score="actionable"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
-              <label>安全感<select class="score-select" data-score="safe"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
-            </div>
-            <div class="score-summary" id="scoreSummary">平均 4.0 · 通过</div>
-            <button class="secondary-button full" type="button" id="saveScoreButton">保存评分</button>
-            <div class="score-history" id="scoreHistory"></div>
-          </aside>
+          </fieldset>
 
-          <aside class="prompt-panel" aria-labelledby="prompt-title">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">接 AI 前</p>
-                <h2 id="prompt-title">Prompt 预览</h2>
-              </div>
+          <fieldset class="choice-group">
+            <legend>素材语言</legend>
+            <div class="choice-grid compact">
+              <label class="choice"><input type="radio" name="materialLanguage" value="中文" checked /><span>中文</span></label>
+              <label class="choice"><input type="radio" name="materialLanguage" value="英文" /><span>英文</span></label>
             </div>
-            <textarea class="prompt-preview" id="promptPreview" rows="10" readonly></textarea>
-            <button class="secondary-button full" type="button" id="copyPromptButton">复制 Prompt JSON</button>
-          </aside>
+          </fieldset>
 
-          <aside class="ai-panel" aria-labelledby="ai-response-title">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">模拟 AI</p>
-                <h2 id="ai-response-title">AI 响应 JSON</h2>
-              </div>
+          <fieldset class="choice-group">
+            <legend>图片数量</legend>
+            <div class="choice-grid compact">
+              <label class="choice"><input type="radio" name="imageCount" value="1 张" /><span>1 张</span></label>
+              <label class="choice"><input type="radio" name="imageCount" value="3 张" checked /><span>3 张 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="imageCount" value="5 张" /><span>5 张</span></label>
+              <label class="choice"><input type="radio" name="imageCount" value="9 张" /><span>9 张</span></label>
             </div>
-            <textarea class="prompt-preview" id="aiResponsePreview" rows="10" readonly></textarea>
-            <button class="secondary-button full" type="button" id="copyAiResponseButton">复制 AI JSON</button>
-          </aside>
-        </div>
+          </fieldset>
 
-        <section class="result-panel" aria-labelledby="result-title">
-          <div class="panel-head">
+          <fieldset class="choice-group">
+            <legend>每张图属于哪类？</legend>
+            <div class="choice-grid">
+              <label class="choice check"><input type="checkbox" name="imageRole" value="主图" checked /><span>主图</span></label>
+              <label class="choice check"><input type="checkbox" name="imageRole" value="细节" checked /><span>细节</span></label>
+              <label class="choice check"><input type="checkbox" name="imageRole" value="场景" checked /><span>场景</span></label>
+              <label class="choice check"><input type="checkbox" name="imageRole" value="效果" /><span>效果</span></label>
+              <label class="choice check"><input type="checkbox" name="imageRole" value="反馈" /><span>反馈</span></label>
+              <label class="choice check"><input type="checkbox" name="imageRole" value="门店" /><span>门店</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice-group">
+            <legend>视频长度</legend>
+            <div class="choice-grid compact">
+              <label class="choice"><input type="radio" name="videoLength" value="没有" checked /><span>没有</span></label>
+              <label class="choice"><input type="radio" name="videoLength" value="15 秒" /><span>15 秒</span></label>
+              <label class="choice"><input type="radio" name="videoLength" value="30 秒" /><span>30 秒 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="videoLength" value="60 秒" /><span>60 秒</span></label>
+            </div>
+          </fieldset>
+
+          <label class="upload-box" for="materialInput">
+            <input id="materialInput" type="file" accept="image/*,video/*" multiple />
+            <span class="upload-icon">+</span>
+            <strong>上传素材</strong>
+            <small id="uploadStatus">图片、视频都可以；没有素材也能继续。</small>
+          </label>
+
+          <label class="text-box" for="materialNote">
+            <span>补充一句（可不填）</span>
+            <textarea id="materialNote" rows="4" placeholder="例如：这是新品细节，想写得自然一点。"></textarea>
+          </label>
+
+          <div class="button-row">
+            <button class="secondary-button" type="button" data-go-page="home">返回首页</button>
+            <button class="primary-button" type="button" data-go-page="content">下一步：选内容包</button>
+          </div>
+        </section>
+
+        <section class="app-page" data-page="content">
+          <div class="hero-card">
+            <p class="eyebrow">第三步</p>
+            <h2>选择内容包</h2>
+            <p>选好后直接生成，再按按钮润一润。</p>
+          </div>
+
+          <fieldset class="choice-group">
+            <legend>内容包</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="contentPack" value="小红书图文包" checked /><span>小红书图文包 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="contentPack" value="抖音口播包" /><span>抖音口播包</span></label>
+              <label class="choice"><input type="radio" name="contentPack" value="朋友圈推广包" /><span>朋友圈推广包</span></label>
+              <label class="choice"><input type="radio" name="contentPack" value="商品种草包" /><span>商品种草包</span></label>
+              <label class="choice"><input type="radio" name="contentPack" value="门店引流包" /><span>门店引流包</span></label>
+              <label class="choice"><input type="radio" name="contentPack" value="一周选题包" /><span>一周选题包</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice-group">
+            <legend>生成数量</legend>
+            <div class="choice-grid compact">
+              <label class="choice"><input type="radio" name="versionCount" value="1 版" /><span>1 版</span></label>
+              <label class="choice"><input type="radio" name="versionCount" value="2 版" checked /><span>2 版 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="versionCount" value="3 版" /><span>3 版</span></label>
+              <label class="choice"><input type="radio" name="versionCount" value="5 版" /><span>5 版</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice-group">
+            <legend>图片配文</legend>
+            <div class="choice-grid compact">
+              <label class="choice"><input type="radio" name="captionCount" value="不需要" /><span>不需要</span></label>
+              <label class="choice"><input type="radio" name="captionCount" value="3 张" checked /><span>3 张 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="captionCount" value="5 张" /><span>5 张</span></label>
+              <label class="choice"><input type="radio" name="captionCount" value="9 张" /><span>9 张</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice-group">
+            <legend>修改次数</legend>
+            <div class="choice-grid compact">
+              <label class="choice"><input type="radio" name="revisionCount" value="1 次" /><span>1 次</span></label>
+              <label class="choice"><input type="radio" name="revisionCount" value="3 次" checked /><span>3 次 <b>推荐</b></span></label>
+              <label class="choice"><input type="radio" name="revisionCount" value="5 次" /><span>5 次</span></label>
+              <label class="choice premium"><input type="radio" name="revisionCount" value="不限次" /><span>不限次 高级版</span></label>
+            </div>
+          </fieldset>
+
+          <button class="primary-button full" type="button" id="generateButton">生成内容包</button>
+
+          <section class="result-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">生成结果</p>
+                <h2>内容包</h2>
+              </div>
+              <button class="text-button" type="button" id="saveButton">保存</button>
+            </div>
+            <div class="summary-bar" id="summaryBar"></div>
+            <div class="result-list" id="resultList">
+              <div class="empty-state">选好内容包后，点击“生成内容包”。</div>
+            </div>
+            <div class="publish-actions">
+              <button class="secondary-button" type="button" data-copy="title">复制标题</button>
+              <button class="secondary-button" type="button" data-copy="body">复制正文</button>
+              <button class="primary-button" type="button" data-copy="all">复制全部 推荐</button>
+              <a class="publish-link" href="https://www.xiaohongshu.com" target="_blank" rel="noreferrer">去小红书</a>
+            </div>
+          </section>
+        </section>
+
+        <section class="app-page" data-page="profile">
+          <div class="profile-card">
+            <div class="avatar">图</div>
             <div>
-              <p class="eyebrow">生成结果</p>
-              <h2 id="result-title">可复制、可改写、可继续发布</h2>
-            </div>
-            <div class="result-actions">
-              <span class="status-pill" id="resultMeta">小红书 · 真实分享</span>
-              <button class="secondary-button compact" type="button" id="copyAllButton">整篇复制</button>
-              <button class="secondary-button compact" type="button" id="softenButton">更自然</button>
-              <button class="secondary-button compact" type="button" id="shortenButton">缩短一点</button>
+              <p class="eyebrow">我的账号</p>
+              <h2 id="userName">微信用户</h2>
+              <p id="userMeta">免费体验版</p>
             </div>
           </div>
-          <div class="result-grid" id="resultGrid"></div>
+
+          <div class="stats-grid">
+            <div><strong>20</strong><span>剩余生成</span></div>
+            <div><strong>3</strong><span>可修改次数</span></div>
+            <div><strong>免费</strong><span>当前套餐</span></div>
+          </div>
+
+          <section class="saved-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">历史内容</p>
+                <h2>最近保存</h2>
+              </div>
+              <button class="text-button" type="button" id="clearSavedButton">清空</button>
+            </div>
+            <div class="saved-list" id="savedList"></div>
+          </section>
+
+          <div class="settings-list">
+            <button type="button">常用账号设置</button>
+            <button type="button">套餐升级</button>
+            <button type="button">联系客服</button>
+            <button type="button" id="logoutButton">退出登录</button>
+          </div>
         </section>
       </main>
+
+      <nav class="bottom-nav" aria-label="主导航">
+        <button class="active" type="button" data-tab="home"><span>首页</span></button>
+        <button type="button" data-tab="material"><span>素材</span></button>
+        <button type="button" data-tab="content"><span>内容</span></button>
+        <button type="button" data-tab="profile"><span>我的</span></button>
+      </nav>
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
